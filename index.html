@@ -1,1 +1,67 @@
-Hello
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@100,200..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8SB4NGT9M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-J8SB4NGT9M');
+    </script>
+
+    <script src="https://tentacularideas.github.io/lightelement/lightelement.js"></script>
+    <script src="/js/background.js"></script>
+    <script src="/js/window.js"></script>
+    <script src="/js/homepage.js"></script>
+
+    <title>Tentacular Ideas</title>
+
+    <style type="text/css">
+      :root {
+        --text-color: #443520;
+        --hover-color: hsl(from var(--color) h s calc(l + 20));
+        --background-color: #faf7f1;
+        --font-family: "Noto Sans", sans-serif;
+        --font-weight: 300;
+        --font-size: 16px;
+
+        --color-red: #ff7676;
+        --color-orange: #ff9857;
+        --color-yellow: #ffe961;
+        --color-green: #87c056;
+        --color-blue: #4462c8;
+        --color-purple: #6642c2;
+        --color-indigo: #aa63d8;
+      }
+
+      body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        background-color: var(--background-color);
+
+        font-family: var(--font-family);
+        font-size: var(--font-size);
+        font-weight: var(--font-weight);
+        color: var(--text-color);
+      }
+    </style>
+  </head>
+  <body>
+    <tideas-homepage></tideas-homepage>
+  </body>
+</html>
