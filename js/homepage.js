@@ -7,6 +7,11 @@ class Homepage extends LightElement {
       flex-direction: row;
       justify-content: center;
       align-items: stretch;
+
+      position: relative;
+      max-width: 30em;
+      height: 100%;
+      max-height: 60em;
     }
     
     body {
@@ -16,10 +21,6 @@ class Homepage extends LightElement {
       flex-direction: row;
       justify-content: center;
       align-items: stretch;
-    }
-
-    tideas-window {
-      max-width: 25em;
     }
     
     div.profile {
@@ -92,40 +93,47 @@ class Homepage extends LightElement {
       margin-top: 2em;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: stretch;
       justify-content: flex-start;
       gap: 1em;
 
       li {
         list-style-type: none;
 
-        h2 {
-          margin: 0;
-          padding: 0;
-          margin-bottom: 0.3em;
-          font-size: 1.2em;
-          font-weight: 400;
-        }
-
-        p {
-          margin: 0;
-          padding: 0;
-        }
-
         a {
+          display: block;
+          padding: 15px;
+
+          border: 2px solid #ffffff55;
+          border-radius: 15px;
+          background-color: #ffffff1c;
+          transition: background-color 100ms ease-in;
+
           color: var(--text-color);
-          font-size: 0.9em;
-          transition: color 100ms ease-in;
+          text-decoration: none;
+          text-align: center;
+        
+          h2 {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 0.2em;
+            font-size: 1.2em;
+            font-weight: 400;
+          }
+
+          p {
+            margin: 0;
+            padding: 0;
+          }
 
           &:hover {
-            color: var(--hover-color);
+            background-color: #ffffff55;
           }
         }
       }
     }
   `;
   static html = `
-    <tideas-background aria-hidden="true"></tideas-background>
     <tideas-window>
       <div class="profile">
         <div class="picture">
@@ -150,9 +158,10 @@ class Homepage extends LightElement {
 
       <ul class="projects">
         <li *for="let project of this._projects">
-          <h2>{{ project.title }}</h2>
-          <p>{{ project.description }}</p>
-          <a [href]="project.url">Learn more...</a>
+          <a [href]="project.url">
+            <h2>{{ project.title }}</h2>
+            <p>{{ project.description }}</p>
+          </a>
         </li>
       </ul>
     </tideas-window>

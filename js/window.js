@@ -11,6 +11,7 @@ class Window extends LightElement {
       background-color: #ffffff05;
       backdrop-filter: blur(5px);
       border: 2px solid #ffffff55;
+      box-shadow: inset 0px 0px 10px #ffffff55;
       border-radius: 20px;
       padding: 15px;
     }
@@ -29,11 +30,6 @@ class Window extends LightElement {
   static html = `
     <slot></slot>
   `;
-
-  title;
-
-  async onInit() {
-  }
 }
 
 Window.register();

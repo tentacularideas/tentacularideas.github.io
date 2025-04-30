@@ -3,10 +3,14 @@ class Background extends LightElement {
   static css = `
     :host {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      top: 50%;
+      left: 50%;
+
+      transform: translateX(-50%) translateY(-50%);
+      width: 100%;
+      height: 100%;
+      max-width: 30em;
+      max-height: 60em;
     }
 
     div {
@@ -22,26 +26,30 @@ class Background extends LightElement {
       &:nth-child(2 of div) {
         top: -10%;
         left: 25%;
+        transform: rotate(0.5turn) translateY(-33%);
       }
 
       &:nth-child(3 of div) {
-        top: 20%;
-        left: -25%;
+        top: 23%;
+        left: -38%;
+        transform: rotate(333deg);
       }
 
       &:nth-child(4 of div) {
         top: 20%;
-        left: 25%;
+        left: 21%;
+        transform: rotate(128deg) translateY(-33%);
       }
 
       &:nth-child(5 of div) {
-        top: 40%;
+        top: 50%;
         left: -25%;
       }
 
       &:nth-child(6 of div) {
-        top: 40%;
+        top: 50%;
         left: 25%;
+        transform: rotate(128deg) translateY(-33%);
       }
 
       &:nth-child(7 of div) {
