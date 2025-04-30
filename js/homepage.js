@@ -50,11 +50,13 @@ class Homepage extends LightElement {
         margin-bottom: 0.1em;
         font-size: 1.4em;
         font-weight: 400;
+        filter: drop-shadow(1px 1px 0px #ffffff55);
       }
 
       p.bio {
         margin: 0;
         padding: 0;
+        filter: drop-shadow(1px 1px 0px #ffffff55);
       }
 
       ul.social {
@@ -75,6 +77,7 @@ class Homepage extends LightElement {
               width: 2em;
               fill: var(--text-color);
               transition: fill 100ms ease-in;
+              filter: drop-shadow(1px 1px 0px #ffffff55);
             }
 
             &:hover {
@@ -119,11 +122,13 @@ class Homepage extends LightElement {
             margin-bottom: 0.2em;
             font-size: 1.2em;
             font-weight: 400;
+            filter: drop-shadow(1px 1px 0px #ffffff55);
           }
 
           p {
             margin: 0;
             padding: 0;
+            filter: drop-shadow(1px 1px 0px #ffffff55);
           }
 
           &:hover {
