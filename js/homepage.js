@@ -117,12 +117,22 @@ class Homepage extends LightElement {
           text-align: center;
         
           h2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 0.6em;
             margin: 0;
             padding: 0;
             margin-bottom: 0.2em;
             font-size: 1.2em;
             font-weight: 400;
             filter: drop-shadow(1px 1px 0px #ffffff55);
+
+            img.icon {
+              height: 2em;
+              transform: translateY(1px);
+            }
           }
 
           p {
@@ -166,6 +176,11 @@ class Homepage extends LightElement {
           <a [href]="project.url">
             <h2>{{ project.title }}</h2>
             <p>{{ project.description }}</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://buymeacoffee.com/tentacularideas?utm_source=landing&utm_medium=referral&utm_campaign=default">
+            <h2><img class="icon" src="/buymeacoffee.svg" alt="Buy me a coffee">Buy me a coffee</h2>
           </a>
         </li>
       </ul>
