@@ -42,8 +42,9 @@ class Background extends LightElement {
       }
 
       &:nth-child(5 of div) {
-        top: 50%;
-        left: -25%;
+        top: 53%;
+        left: -28%;
+        transform: rotate(301deg);
       }
 
       &:nth-child(6 of div) {
@@ -53,8 +54,9 @@ class Background extends LightElement {
       }
 
       &:nth-child(7 of div) {
-        top: 65%;
+        top: 71%;
         left: 2%;
+        transform: rotate(218deg);
       }
     }
   `;
